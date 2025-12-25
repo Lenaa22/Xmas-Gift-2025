@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Book</title>
+    <link rel="stylesheet" href="Interactive book.css">
+</head>
+<body>
+
+<div class="book-container">
+    <div class="book">
+
+      <!-- ================= MAIN COVER ================= -->
+<div class="page cover" id="cover-main">
+    <div class="gift-wrap">
+        <div class="ribbon-vertical"></div>
+        <div class="ribbon-horizontal"></div>
+        <div class="ribbon-bow"></div>
+        <div class="gift-content">
+            <h1 id="gift-title">
+                <strong>My Gift To You</strong>
+            </h1>
+            <p id="author">
+                <strong>for Tejae Whitley</strong>
+            </p>
+            <button onclick="unwrapGift()">Unwrap Present</button>
+        </div>
+    </div>
+</div>
+
+        <!-- ================= HOME SECTION ================= -->
+        <div class="page cover" id="home-cover">
+            <h1>Merry Christmas My Love</h1>
+            <img src="HelloKittyXmas.gif" alt="Hello Kitty GIF" style="width: 600px; height: 350px;">
+            <p id="home-letter">Merry Christmas baby! I understand now why you always look so stressed when you’re doing your work😅 Coding is NOT for the weak. I had fun making this even though I had a lot of help 😞 Anyways I hope you enjoy this as much as I did. I wish I could have gotten you a physical gift (even though you’re a menace to shop for) but you know… funds are finished at the moment🧍🏾‍♀️That’s why I wanted to make this as interactive as possible❤️</p>
+            <button onclick="goToPage('photo-cover')">Open Present</button>
+            <button onclick="goToPage('playlist-cover')">Skip to Playlist</button>
+            <button onclick="goToPage('memory-cover')">Skip to Memory Lane</button>
+            <button onclick="goToPage('game-cover')">Skip to Game</button>
+        </div>
+
+        <!-- ================= PHOTO ALBUM ================= -->
+        <div class="page cover" id="photo-cover">
+            <h1>Tejae Through My Eyes</h1>
+            <p>Captured moments</p>
+            <img src="_.gif" alt="uwu eyes" style="width: 480px; height: 480px;">    
+            <button onclick="goToPage('photo-1')">Open Album</button>
+        </div>
+
+        <div class="page photo-page" id="photo-1">
+            <div class="illustration">
+                <img src="myman.jpg" alt="Photo 1">    
+            </div>
+            <div class="photo-nav">
+                <button class="arrow right" onclick="goToPage('photo-2')">→</button>
+            </div>
+
+            <p class="caption">
+                <strong>My baby's work ID picture🤍</strong>
+            </p>
+        </div>
+
+        <div class="page photo-page" id="photo-2">
+            <div class="illustration">
+                <img src="sohandsome.jpg" alt="Photo 2">
+            </div>
+            <div class="photo-nav">
+                <button class="arrow left" onclick="goToPage('photo-1')">←</button>
+                <button class="arrow right" onclick="goToPage('photo-3')">→</button>
+            </div>
+
+            <p class="caption">
+                <strong>My handsome cutie 🫶🏽</strong> 
+            </p>
+        </div>
+       
+        <div class="page photo-page" id="photo-3">
+            <div class="illustration">
+                <img src="cutesmile.jpg" alt="Photo 3">    
+            </div>
+            <div class="photo-nav">
+                <button class="arrow left" onclick="goToPage('photo-2')">←</button>
+                <button class="arrow right" onclick="goToPage('photo-4')">→</button>
+            </div>
+
+            <p class="caption">
+                <strong> I always love to see this smile</strong> 
+            </p>
+        </div>
+
+        <div class="page photo-page" id="photo-4">
+            <div class="illustration">
+                <img src="cuddlybear.jpg" alt="Photo 4">    
+            </div>
+            <div class="photo-nav">
+                <button class="arrow left" onclick="goToPage('photo-3')">←</button>
+                <button class="arrow right" onclick="goToPage('photo-5')">→</button>
+            </div>
+
+            <p class="caption">
+                <strong>Forever my sleepy baby🩷</strong> 
+            </p>
+        </div>
+
+        <div class="page photo-page" id="photo-5">
+            <div class="illustration">
+                <img src="alwaysSnorin.jpg" alt="Photo 5">    
+            </div>
+            <div class="photo-nav">
+                <button class="arrow left" onclick="goToPage('photo-4')">←</button>
+                <button class="arrow right" onclick="goToPage('photo-6')">→</button>
+            </div>
+
+            <p class="caption">
+                <strong>Be snorin like a mf😭</strong>
+            </p>
+        </div>
+
+        <div class="page photo-page" id="photo-6">
+            <div class="illustration">
+                <img src="Yumm.jpg" alt="Photo 6">    
+            </div>
+            <div class="photo-nav">
+                <button class="arrow left" onclick="goToPage('photo-5')">←</button>
+                <button class="arrow right" onclick="goToPage('photo-7')">→</button>
+            </div>
+
+            <p class="caption">
+                <strong>Yummy😋 daddy??😏</strong>
+            </p>
+        </div>
+
+        <div class="page photo-page" id="photo-7">
+            <div class="illustration">
+                <img src="meep.jpg" alt="Photo 7">    
+            </div>
+            <div class="photo-nav">
+                <button class="arrow left" onclick="goToPage('photo-6')">←</button>
+                <button class="arrow right" onclick="goToPage('photo-8')">→</button>
+            </div>
+
+            <p class="caption">
+                <strong>This materpiece is titled "Meep"</strong>
+            </p>
+        </div>
+
+        <div class="page photo-page" id="photo-8">
+            <div class="illustration">
+                <img src="socandid.jpg" alt="Photo 8">    
+            </div>
+            <div class="photo-nav">
+                <button class="arrow left" onclick="goToPage('photo-7')">←</button>
+                <button class="arrow right" onclick="goToPage('photo-9')">→</button>
+            </div>
+
+            <p class="caption">
+                <strong>What's cracking good looking 👀</strong>
+            </p>
+        </div>
+
+        <div class="page photo-page" id="photo-9">
+            <div class="illustration">
+                <img src="sideeye.jpg" alt="Photo 9">    
+            </div>
+            <div class="photo-nav">
+                <button class="arrow left" onclick="goToPage('photo-8')">←</button>
+                <button class="arrow right" onclick="goToPage('album-transition')">→</button>
+            </div>
+
+            <p class="caption">
+                <strong>Side-eye king💀</strong>
+            </p>
+        </div>
+        
+        <!-- ================= ALBUM CLOSE TRANSITION ================= -->
+         <div class="page cover" id="album-transition" style="background: #d39bff; color: white;">
+            <h1 style="font-size: 48px; margin-bottom: 20px;">Having fun so far😏</h1>
+            <img src="ReindeerKitty.jpg" alt="Reindeer Hello Kitty" style="width: 480px; height: 450px;">
+            <button onclick="goToPage('playlist-cover')">Close album</button>
+            <button onclick="goToPage('photo-cover')">Back to Album</button>
+            <button onclick="goToPage('home-cover')">Back to Start</button>
+        </div>
+
+        <!-- ================= PLAYLIST ================= -->
+        <div class="page cover" id="playlist-cover">
+            <h1> A Playlist for You</h1>
+            <p>Songs that remind me of you</p>
+            <img src="HyperRabbit _ Very Good !!!.gif" alt="Dancin Gif" style="width: 488px; height: 488px;">
+            <button onclick="goToPage('playlist-1')">Play</button>
+            <button onclick="goToPage('photo-cover')">Back to Album</button>
+            <button onclick="goToPage('home-cover')">Back to Start</button>
+        </div>
+
+        <div class="page photo-page" id="playlist-1">
+            <div class="illustration">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3Ox7FJrgNNBfctIGPgj40s?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <p class="caption playlist-caption">
+                <strong>Favourite Lyric:</strong>
+                "I have to say it's ONLY YOU🫵🏽 Yeah, baby, it's only you"
+            </p>
+            <div class="photo-nav">
+                <button class="arrow right" onclick="goToPage('playlist-2')">→</button>
+            </div>
+        </div>
+        
+        <div class="page photo-page" id="playlist-2">
+            <div class="illustration">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5AnCLGg35ziFOloEnXK4uu?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <p class="caption playlist-caption">
+                <strong>Favourite Lyric:</strong>
+                "Boy I adore you-ou-ou-ou-ou 🩷"
+            </p>
+            <div class="photo-nav">
+                <button class="arrow left" onclick="goToPage('playlist-1')">←</button>
+                <button class="arrow right" onclick="goToPage('playlist-3')">→</button>
+            </div>
+        </div>
+        
+        <div class="page photo-page" id="playlist-3">
+            <div class="illustration">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6vc2Jq2vaGu8z326kSrw92?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <p class="caption playlist-caption">
+                <strong>Favourite Lyric:</strong>
+                "I said your love, your love, your love, is my drug"
+            </p>
+            <div class="photo-nav">
+                <button class="arrow left" onclick="goToPage('playlist-2')">←</button>
+                <button class="arrow right" onclick="goToPage('playlist-4')">→</button>
+            </div>
+        </div>
+        
+        <div class="page photo-page" id="playlist-4">
+            <div class="illustration">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5utUZ5nv6y6dR8irsnOQEj?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <p class="caption playlist-caption">
+                <strong>Favourite Lyric:</strong>
+                "In any other universe, I'd find you😘"
+            </p>
+            <div class="photo-nav">
+                <button class="arrow left" onclick="goToPage('playlist-3')">←</button>
+                <button class="arrow right" onclick="goToPage('playlist-5')">→</button>
+            </div>
+        </div>
+        
+        <div class="page photo-page" id="playlist-5">
+            <div class="illustration">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1jloWdvMh9nwHUu3mag8CL?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <p class="caption playlist-caption">
+                <strong>Favourite Lyric:</strong>
+                "Baby love me non-stop, I will love you non-stop💃🏽"
+            </p>
+            <div class="photo-nav">
+                <button class="arrow left" onclick="goToPage('playlist-4')">←</button>
+                <button class="arrow right" onclick="goToPage('playlist-6')">→</button>
+            </div>
+        </div>
+        
+        <div class="page photo-page" id="playlist-6">
+            <div class="illustration">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1tQDPFyd6nU5QYSDxlDxJi?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <p class="caption playlist-caption">
+                <strong>Favourite Lyric:</strong>
+                "I-I-I-I, I don't wanna hype ya but you a lucky nigga if my mean ass like ya😝"
+            </p>
+            <div class="photo-nav">
+                <button class="arrow left" onclick="goToPage('playlist-5')">←</button>
+                <button class="arrow right" onclick="goToPage('playlist-end')">→</button>
+            </div>
+        </div>
+        
+        <!-- ================= PLAYLIST END ================= -->
+        <div class="page cover" id="playlist-end">
+            <h1>You Like Them Songs Huh😝</h1>
+            <img src="MyMelodyGIF.gif" alt="Snowman Gif" style="width: 480px; height: 450px;">
+            <button onclick="goToPage('memory-cover')">Continue</button>
+            <button onclick="goToPage('playlist-1')">Restart Playlist</button>
+            <button onclick="goToPage('home-cover')">Back to Start</button>
+        </div>
+
+       <!-- ================= MEMORY LANE ================= -->
+<div class="page cover" id="memory-cover">
+    <h1>Let's Go Down Memory Lane</h1>
+    <p>See our journey together</p>
+    <img src="bunny-hug-rabbit-hug.gif" alt="huggin Gif" style="width: 450px; height: 450px;">
+    <button onclick="goToPage('memory-timeline')">See Timeline</button>
+    <button onclick="goToPage('playlist-1')">Back to Playlist</button>
+    <button onclick="goToPage('home-cover')">Back to Start</button>
+</div>
+
+<div class="page" id="memory-timeline">
+    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; width: 100%;">
+        <h2 style="text-align: center; margin-bottom: 20px; margin-top: 20px;">Our Timeline</h2>
+        
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            
+            <!-- Memory 1 - Top -->
+            <div class="timeline-item top">
+                <div class="timeline-card">
+                    <div class="timeline-card-inner">
+                        <div class="timeline-card-front">
+                            <img src="firstdate.jpg" alt="Memory 1">
+                            <div class="timeline-date">July 7th, 2022</div>
+                        </div>
+                        <div class="timeline-card-back">
+                            <p>Our first date at the Rec Room & our freaky escapade under the trees near the harbour 💀</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <!-- Memory 2 - Bottom -->
+            <div class="timeline-item bottom">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-card-inner">
+                        <div class="timeline-card-front">
+                            <img src="baecation.jpg" alt="Memory 2">
+                            <div class="timeline-date">December 22nd, 2023</div>
+                        </div>
+                        <div class="timeline-card-back">
+                            <p>Our first big trip! Niagara falls. Super fun 🤗</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Memory 3 - Top -->
+            <div class="timeline-item top">
+                <div class="timeline-card">
+                    <div class="timeline-card-inner">
+                        <div class="timeline-card-front">
+                            <img src="potterydate.jpg" alt="Memory 3">
+                            <div class="timeline-date">February 19th, 2024</div>
+                        </div>
+                        <div class="timeline-card-back">
+                            <p>Painting pottery at Clay With Me 🏺</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <!-- Memory 4 - Bottom -->
+            <div class="timeline-item bottom">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-card-inner">
+                        <div class="timeline-card-front">
+                            <img src="wintervillage.jpg" alt="Memory 4">
+                            <div class="timeline-date">December 3rd, 2024</div>
+                        </div>
+                        <div class="timeline-card-back">
+                            <p>The first time we went to the Winter Village. Still thinking about that salmon taco 🌮</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Memory 5 - Top -->
+            <div class="timeline-item top">
+                <div class="timeline-card">
+                    <div class="timeline-card-inner">
+                        <div class="timeline-card-front">
+                            <img src="supahigh.jpg" alt="Memory 5">
+                            <div class="timeline-date">February 4th, 2025</div>
+                        </div>
+                        <div class="timeline-card-back">
+                            <p>Baby's first time greening out 😭 It was scary then but we can laugh now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <!-- Memory 6 - Bottom -->
+            <div class="timeline-item bottom">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-card-inner">
+                        <div class="timeline-card-front">
+                            <img src="perfume.jpg" alt="Memory 6">
+                            <div class="timeline-date">February 12th, 2025</div>
+                        </div>
+                        <div class="timeline-card-back">
+                            <p>Making our new signature scents 👃🏽 We need to make more</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="goToPage('game-cover')">Close Timeline</button>
+</div>
+
+        <!-- ================= GAME ================= -->
+<div class="page cover" id="game-cover">
+    <h1>Guess the Memory Quiz</h1>
+    <p>How well do you remember our moments?</p>
+    <img src="game.gif" alt="gaming Gif" style="width: 480px; height: 450px;">
+    <button onclick="goToPage('game-start')">Start Game</button>
+    <button onclick="goToPage('memory-timeline')">Back To Timeline</button>
+    <button onclick="goToPage('home-cover')">Back to Start</button>
+</div>
+
+<div class="page" id="game-start">
+    <div class="game-container">
+        <div class="game-header">
+            <h2 id="question-number">Question 1 of 6</h2>
+            <div id="score-display">Score: 0/6</div>
+        </div>
+        
+        <div class="game-content">
+            <div class="photo-container">
+                <img id="game-photo" src="" alt="Memory Photo" class="blurred">
+            </div>
+            
+            <div class="question-container">
+                <h3 id="question-text"></h3>
+                <div id="choices-container"></div>
+            </div>
+            
+            <div id="feedback-message" class="feedback hidden"></div>
+            
+            <button id="next-button" class="hidden" onclick="nextQuestion()">Next Question</button>
+        </div>
+    </div>
+</div>
+
+<div class="page cover" id="game-end">
+    <h1>Game Complete! 🎉</h1>
+    <p id="final-score"></p>
+    <p id="final-message"></p>
+    <img src="clapping-yay.gif" alt="uwu eyes" style="width: 460px; height: 430px;"> 
+    <button onclick="goToPage('game-start'); resetGame();">Play Again</button>
+    <button onclick="goToPage('cover-main')">Back to Start</button>
+</div>
+
+<audio id="background-music" loop>
+    <source src="ChrimuhhInstrumental.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    // Background music
+    const bgMusic = document.getElementById('background-music');
+    
+    function goToPage(pageId) {
+        document.querySelectorAll('.page').forEach(page => {
+            page.style.display = 'none';
+            page.style.removeProperty('display');
+        });
+        
+        const targetPage = document.getElementById(pageId);
+        
+        // Special handling for memory-timeline
+        if (pageId === 'memory-timeline') {
+            targetPage.style.display = 'flex';
+        } else {
+            targetPage.style.display = 'block';
+        }
+        
+        // Pause background music on playlist pages, resume on other pages
+        if (pageId.startsWith('playlist-') && pageId !== 'playlist-cover' && pageId !== 'playlist-end') {
+            if (bgMusic) {
+                bgMusic.pause();
+            }
+        } else {
+            // Try to play music when navigating (helps with autoplay restrictions)
+            if (bgMusic && bgMusic.paused) {
+                bgMusic.play().catch(err => console.log('Autoplay prevented'));
+            }
+        }
+    }
+
+    // Show main cover on load
+    goToPage('cover-main');
+    
+    // Try to start music on first user interaction
+    document.addEventListener('click', () => {
+        if (bgMusic.paused) {
+            bgMusic.play().catch(err => console.log('Autoplay prevented'));
+        }
+    }, { once: true });
+
+    // Game Logic
+    const questions = [
+        {
+            photo: "Rawr.jpg",
+            question: "Which restaurant was this taken at?",
+            choices: ["Carbon bar", "Cactus club", "The keg", "Dalgonae"],
+            correct: 0,
+            message: "Correct! Best caesar salad to this day😋"
+        },
+        {
+            photo: "supahigh.jpg",
+            question: "What movie did we watch before this?",
+            choices: ["Sinners", "One of them days", "Barbie", "Snow White"],
+            correct: 1,
+            message: "Correct!👏🏽 Nice movie, but next time let's not have 100mg in weed gummies 💀"
+        },
+        {
+            photo: "ToBeWed.jpg",
+            question: "How long have we been -virtually- married for?",
+            choices: ["2 years, 10 days", "1 year, 70 days", "2 years, 27 days", "1 year, 27 days"],
+            correct: 2,
+            message: "Correct! We're literally husband and wife"
+        },
+        {
+            photo: "Midori.jpg",
+            question: "Best Ramen place?",
+            choices: ["Kinton Ramen", "Midori Ramen", "Ramen Station", "Sansotei Ramen"],
+            correct: 1,
+            message: "Correct! Well, the best in my opinion😁"
+        },
+        {
+            photo: "Forever.jpg",
+            question: "Exactly how long have we been together?",
+            choices: ["3 years, 6 months, 4 days", "3 years, 5 months, 11 days", "3 years, 4 months, 16 days", "3 years, 3 months, 21 days"],
+            correct: 1,
+            message: "Correct!🥰 That's basically forever ❤️"
+        },
+        {
+            photo: "SoGood.jpg",
+            question: "Which restaurant would I want to go back to?",
+            choices: ["Sad songs", "Katsuya", "The Haam", "The furniture warehouse"],
+            correct: 2,
+            message: "Correct! I think about that sushi and tacos all the time🥲 So fuckin delicious"
+        }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    function startGame() {
+        currentQuestion = 0;
+        score = 0;
+        loadQuestion();
+    }
+
+    function loadQuestion() {
+    const q = questions[currentQuestion];
+    const photo = document.getElementById('game-photo');
+    
+    // Blur immediately
+    photo.className = 'blurred';
+    
+    document.getElementById('question-number').textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
+    document.getElementById('score-display').textContent = `Score: ${score}/${questions.length}`;
+    document.getElementById('question-text').textContent = q.question;
+    document.getElementById('feedback-message').className = 'feedback hidden';
+    document.getElementById('next-button').className = 'hidden';
+    
+    // Load image after blur is applied
+    setTimeout(() => {
+        photo.src = q.photo;
+    }, 70);
+    
+    const choicesContainer = document.getElementById('choices-container');
+    choicesContainer.innerHTML = '';
+    
+    q.choices.forEach((choice, index) => {
+        const button = document.createElement('button');
+        button.className = 'choice-button';
+        button.textContent = choice;
+        button.onclick = () => selectAnswer(index);
+        choicesContainer.appendChild(button);
+    });
+}
+
+    function selectAnswer(selectedIndex) {
+        const q = questions[currentQuestion];
+        const buttons = document.querySelectorAll('.choice-button');
+        const feedback = document.getElementById('feedback-message');
+        const photo = document.getElementById('game-photo');
+        
+        buttons.forEach(btn => btn.disabled = true);
+        
+        if (selectedIndex === q.correct) {
+            buttons[selectedIndex].classList.add('correct');
+            feedback.textContent = q.message;
+            feedback.className = 'feedback correct';
+            photo.classList.remove('blurred');
+            score++;
+            document.getElementById('score-display').textContent = `Score: ${score}/${questions.length}`;
+        } else {
+            buttons[selectedIndex].classList.add('incorrect');
+            buttons[q.correct].classList.add('correct');
+            feedback.textContent = "Not quite! The correct answer was: " + q.choices[q.correct];
+            feedback.className = 'feedback incorrect';
+            photo.classList.remove('blurred');
+        }
+        
+        document.getElementById('next-button').classList.remove('hidden');
+    }
+
+    function nextQuestion() {
+        currentQuestion++;
+        
+        if (currentQuestion < questions.length) {
+            loadQuestion();
+        } else {
+            endGame();
+        }
+    }
+
+    function endGame() {
+        goToPage('game-end');
+        
+        const finalScore = document.getElementById('final-score');
+        const finalMessage = document.getElementById('final-message');
+        
+        finalScore.textContent = `You got ${score} out of ${questions.length} correct!`;
+        
+        if (score === questions.length) {
+            finalMessage.textContent = "Perfect score! You know me so well! 💕";
+        } else if (score >= questions.length / 2) {
+            finalMessage.textContent = "Not bad! You remember our moments 🥰";
+        } else {
+            finalMessage.textContent = "We need to make more memories together! 😘";
+        }
+    }
+
+    function resetGame() {
+        currentQuestion = 0;
+        score = 0;
+        startGame();
+    }
+
+    // Start game when navigating to game page
+    const originalGoToPage = goToPage;
+    goToPage = function(pageId) {
+        originalGoToPage(pageId);
+        if (pageId === 'game-start') {
+            startGame();
+        }
+    };
+
+    function unwrapGift() {
+    const giftWrap = document.querySelector('.gift-wrap');
+    giftWrap.classList.add('unwrapping');
+    
+    setTimeout(() => {
+        goToPage('home-cover');
+    }, 1000);
+}
+
+</script>
+
+</body>
+</html>
